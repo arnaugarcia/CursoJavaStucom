@@ -2,8 +2,8 @@ package DAW_EXTRAS;
 import java.io.*;
 import java.util.*;
 public class DAW_Examen_Parcial1 {
-
-	public static void main(String[] args) {
+@SuppressWarnings("unused")
+public static void main(String[] args) {
 		try{
 			BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
 			int opcio = 0;
@@ -17,10 +17,10 @@ public class DAW_Examen_Parcial1 {
 			boolean satRaphB2 = false;
 			int numMalos=0;
 			int numInocentes=0;
-			double satLeo=9.0;
-			double satMich=2.0;
-			double satDona=3.0;
-			double satRaph=4.0;
+			double satLeo=0;
+			double satMich=0;
+			double satDona=0;
+			double satRaph=0;
 			double satLeo2=0;
 			double satMich2=0;
 			double satDona2=0;
@@ -142,7 +142,7 @@ public class DAW_Examen_Parcial1 {
 					System.out.println("Que tortuga eres?");
 					String var9 = buffer.readLine();
 					if(var9.equals("Leonardo")){
-						if(!satLeoB){
+						if(!satLeoB2){
 							System.out.println("Leonardo, que satisfacion tienes ahora?");
 							String var10 = buffer.readLine();
 							satLeo2 = Double.parseDouble(var10);
@@ -157,7 +157,7 @@ public class DAW_Examen_Parcial1 {
 						}
 					}
 					if(var9.equals("Michelangelo")){
-						if(!satMichB){
+						if(!satMichB2){
 							System.out.println("Michelangelo, que satisfacion tienes ahora?");
 							String var11 = buffer.readLine();
 							satMich2 = Double.parseDouble(var11);
@@ -166,13 +166,13 @@ public class DAW_Examen_Parcial1 {
 							}else{
 								satMich2=satMich+satMich2;
 							}
-							satMichB = true;
+							satMichB2 = true;
 						}else{
 							System.out.println("Error ya has introducido los datos.");
 						}
 					}
 					if(var9.equals("Donatello")){
-						if(!satDonaB){
+						if(!satDonaB2){
 							System.out.println("Donatello, que satisfacion tienes ahora?");
 							String var12 = buffer.readLine();
 							satDona = Double.parseDouble(var12);
@@ -181,13 +181,13 @@ public class DAW_Examen_Parcial1 {
 							}else{
 								satDona=satDona2+satDona;
 							}
-							satDonaB = true;
+							satDonaB2 = true;
 						}else{
 							System.out.println("Error ya has introducido los datos.");
 						}
 					}
 					if(var9.equals("Raphael")){
-						if(!satRaphB){
+						if(!satRaphB2){
 							System.out.println("Raphael, que satisfacion tienes ahora?");
 							String var13 = buffer.readLine();
 							satRaph2 = Double.parseDouble(var13);
@@ -196,7 +196,7 @@ public class DAW_Examen_Parcial1 {
 							}else{
 								satRaph=satRaph2+satRaph;
 							}
-							satRaphB = true;
+							satRaphB2 = true;
 						}else{
 							System.out.println("Error ya has introducido los datos.");
 						}
