@@ -8,7 +8,7 @@ public class ex04 {
 			BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
 			System.out.println("¿Cuantas alturas quieres introducir?");
 			int numeroAlturas[] = new int[Integer.parseInt(buffer.readLine())];
-			int alturaSuperior=0,alturaInferior=0,alturaSumas = 0;
+			int alturaSuperior=0,alturaInferior=Integer.MAX_VALUE,alturaSumas = 0;
 			for(i=0; i<numeroAlturas.length; i++){
 				System.out.println("Introduce altura:");
 				numeroAlturas[i]= Integer.parseInt(buffer.readLine());

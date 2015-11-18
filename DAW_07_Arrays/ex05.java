@@ -10,9 +10,9 @@ public class ex05 {
 			Double suledoSuperior=0.0;
 			String nombreEmpleadoSuperior="";
 			for(int i=0; i<empleadosNombre.length; i++){
-				System.out.println("Introduce nombre empleado " + i+1 + ":");
+				System.out.println("Introduce nombre empleado " + i + ":");
 				empleadosNombre[i]=buffer.readLine();
-				System.out.println("Introduce sueldo empleado " + i+1 + ":");
+				System.out.println("Introduce sueldo empleado " + i + ":");
 				empleadosSueldo[i]=Double.parseDouble(buffer.readLine());
 				System.out.println(empleadosNombre[i] + " - " +  empleadosSueldo[i]);
 				if(empleadosSueldo[i]>suledoSuperior){
