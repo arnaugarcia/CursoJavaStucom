@@ -18,6 +18,10 @@ public class ex13 {
 			System.out.println("Nota media del ciclo: ");
 			String notaAlumno = buffer.readLine();
 			double nota = Double.parseDouble(notaAlumno);
+			int opcion = 0;
+			while(opcion!=7){
+				System.out.println("");
+				System.out.println("");
 				System.out.println("Menu de opciones: (Introduce un número para continuar) ");
 				System.out.println("1. Nombre y apellidos completos");
 				System.out.println("2. Edad, es mayor de Edad?");
@@ -26,15 +30,13 @@ public class ex13 {
 				System.out.println("5. Número de carácteres que tiene nombre, incial del nombre, y inicial del apellido.");
 				System.out.println("6. Ordenar nombre y apellidos de Alumnos (Introducimos 2 nombres más)");
 				System.out.println("7. Salir");
-				String opcion = buffer.readLine();
+				String var10 = buffer.readLine();
+				opcion = Integer.parseInt(var10);
 				switch(opcion){
-				case "":
-					System.out.println("No has introducido ninguna opción, vuelve a intentarlo");
-					break;
-				case "1":;
+				case 1:;
 					System.out.println("El nombre del Alumno es: " + nombreAlumno + " " + apellidosAlumno);
 					break;
-				case "2":
+				case 2:
 					int edadAlumno = 2015-añoNacAlumno;
 					System.out.println("La edad del Alumno tiene: " + edadAlumno );
 					if(edadAlumno >= 18){
@@ -43,7 +45,7 @@ public class ex13 {
 						System.out.println("No es mayor de edad");
 					}
 					break;
-				case "3":
+				case 3:
 					if(nota<4.99){
 						System.out.println("Suspens");
 					}else{
@@ -64,7 +66,7 @@ public class ex13 {
 						}
 					}
 					break;
-				case "4":
+				case 4:
 					System.out.println("Nota de un Alumno: ");
 					String var1 = buffer.readLine();
 					double notaAlumno1 = Double.parseDouble(var1);
@@ -83,12 +85,12 @@ public class ex13 {
 						}
 					}
 					break;
-				case "5":
+				case 5:
 					String nombreCompletoAlumno = nombreAlumno + " " + apellidosAlumno; 
 					System.out.println("El número de carácteres que tiene el nombre es: " + nombreCompletoAlumno.length());
 					System.out.println("Sus inciales son: " + nombreCompletoAlumno.charAt(0) + apellidosAlumno.charAt(0));
 					break;
-				case "6":
+				case 6:
 					System.out.println("Nombre Alumno 1: ");
 					String nombreAlumno1 = buffer.readLine();
 					System.out.println("Apellido Alumno 1: ");
@@ -125,11 +127,12 @@ public class ex13 {
 						System.out.println(sElemento);
 					}
 					break;
-				case "7":
+				case 7:
 					System.out.println("Terminando programa...");
 					break;
 				default:
 					System.out.println("Opción no válida.");
+				}
 				}
 		} catch (Exception e) {
 			System.out.println("Error al introducir los datos");

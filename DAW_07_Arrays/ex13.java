@@ -1,7 +1,6 @@
 package DAW_07_Arrays;
 import java.io.*;
 public class ex13 {
-
 	public static void main(String[] args) {
 		try {
 			BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
@@ -14,13 +13,10 @@ public class ex13 {
 			int j=0;
 			for(int i=longitudPalabra-1; i>=0; i--){
 				palabraIzquierda[j]=palabra.charAt(i);
-				System.out.print(palabraIzquierda[j]);
 				j++;
 			}
-			System.out.println("");
 			for(int i=0; i<=longitudPalabra-1; i++){
 				palabraDerecha[i]=palabra.charAt(i);
-				System.out.print(palabraDerecha[i]);
 			}
 			for(int i=0; i<=longitudPalabra-1 && palindromo==true; i++){
 				if(palabraIzquierda[i]==palabraDerecha[i]){

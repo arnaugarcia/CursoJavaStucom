@@ -1,4 +1,4 @@
-package DAW_05_StringsII;
+package DAW_06_StringsII;
 import java.io.*;
 public class ex02 {
 
