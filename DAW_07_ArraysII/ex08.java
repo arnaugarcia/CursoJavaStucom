@@ -5,8 +5,8 @@ public class ex08 {
 	public static void main(String[] args) {
 		try {
 			BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
-			String[] palabra=new String [30];
-			char[] letras = new char[30];
+			String[] palabra=new String [10];
+			char[] letras = new char[10];
 			int vocales=0;
 			for(int i=0; i<palabra.length; i++){
 				System.out.println("Introduce carácter " + i + ":");
