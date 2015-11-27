@@ -1,6 +1,6 @@
-package DAW_07_Arrays;
+package DAW_07_ArraysII;
 import java.io.*;
-public class ex13 {
+public class ex04 {
 	public static void main(String[] args) {
 		try {
 			BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));

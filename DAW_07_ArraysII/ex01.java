@@ -1,6 +1,6 @@
-package DAW_07_Arrays;
+package DAW_07_ArraysII;
 import java.io.*;
-public class ex10 {
+public class ex01 {
 
 	public static void main(String[] args) {
 		try {

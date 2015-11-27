@@ -1,5 +1,5 @@
-package DAW_07_Arrays;
-public class ex15 {
+package DAW_07_ArraysII;
+public class ex06 {
 
 	public static void main(String[] args) {
 		int[] array1 = new int[10];
