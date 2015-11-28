@@ -18,7 +18,7 @@ public class ex10 {
 				palabraaBuscar[i]=palabraBuscar.charAt(i);
 			}
 			for(int i=0,j=0; i<caracteres.length && j<palabraaBuscar.length; i++){
-				if(caracteres[i]==palabraaBuscar[j]){
+				if(caracteres[i]==palabraaBuscar[j] && palabraaBuscar[palabraaBuscar.length-1]!=caracteres[caracteres.length-2] ){
 					j++;
 					find=true;
 				}else{
