@@ -75,7 +75,7 @@ public class SaltosLongitud {
 				}	
 			}
 		} catch (Exception e) {
-			System.out.println("Error al introducir los datos" + e);
+			System.out.println("Error" + e);
 		}
 
 	}
