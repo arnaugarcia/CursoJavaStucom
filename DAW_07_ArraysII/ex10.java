@@ -7,25 +7,20 @@ public class ex10 {
 			System.out.println("Introduce una frase:");
 			String frase = buffer.readLine();
 			boolean find=false;
-			char caracteres[] = new char[frase.length()];
-			for(int i=0; i<caracteres.length; i++){
-				caracteres[i]=frase.charAt(i);
-			}
+			char caracteres[] = frase.toCharArray();
 			System.out.println("Introduce la frase que quieres buscar:");
 			String palabraBuscar=buffer.readLine();
-			char palabraaBuscar[]=new char[palabraBuscar.length()];
-			for(int i=0; i<palabraaBuscar.length; i++){
-				palabraaBuscar[i]=palabraBuscar.charAt(i);
-			}
-			for(int i=0,j=0; i<caracteres.length && j<palabraaBuscar.length; i++){
-				if(caracteres[i]==palabraaBuscar[j] && palabraaBuscar[palabraaBuscar.length-1]!=caracteres[caracteres.length-2] ){
+			char palabraaBuscar[]=palabraBuscar.toCharArray();
+			int j=0;
+			for(int i=0; i<caracteres.length && j<palabraaBuscar.length; i++){
+				if(caracteres[i]==palabraaBuscar[j]){
 					j++;
 					find=true;
 				}else{
 					find=false;
 				}
 			}
-			if(find){
+			if(find && j==palabraaBuscar.length){
 				System.out.println("La plabra está en la frase");
 			}else{
 				System.out.println("La palabra no está en la frase.");
