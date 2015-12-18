@@ -54,14 +54,14 @@ public class SaltosLongitud {
 				
 				case 3:
 					System.out.println("Mejores marcas: ");
+					Arrays.sort(marcas2013);
+					Arrays.sort(marcas2014);
+					Arrays.sort(marcas2015);
 					for(int i=0; i<numeroParticipantes; i++){
-						Arrays.sort(marcas2013);
 						System.out.println("Las mejores marcas en el año 2013:");
 						System.out.println(marcas2013[i]);
-						Arrays.sort(marcas2014);
 						System.out.println("Las mejores marcas en el año 2014:");
 						System.out.println(marcas2014[i]);
-						Arrays.sort(marcas2015);
 						System.out.println("Las mejores marcas en el año 2015:");
 						System.out.println(marcas2015[i]);
 					}

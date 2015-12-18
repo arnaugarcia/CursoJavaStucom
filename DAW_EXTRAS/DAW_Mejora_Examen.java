@@ -13,13 +13,19 @@ public class DAW_Mejora_Examen {
 		String var2 = buffer.readLine();
 		if(var2.equals("si")){
 			aniversario = true;
+		}else{
+			if(var2.equals("no")){
+				aniversario = false;
+			}else{
+				System.out.println("Error");
+			}
 		}
 		if(!aniversario){
 			if (velocidad >= 0 && velocidad <= 60){
 			System.out.println("0");
 			}else if (velocidad >= 61 && velocidad <= 80){
 				System.out.println("1");
-			}else if (velocidad > 81){
+			}else if (velocidad >= 81){
 				System.out.println("2");
 			}
 		}
@@ -28,7 +34,7 @@ public class DAW_Mejora_Examen {
 				System.out.println("0");
 			}else if (velocidad >= 66 && velocidad <= 85){
 				System.out.println("1");
-			}else if (velocidad > 86){
+			}else if (velocidad >= 86){
 				System.out.println("2");
 			}
 		}

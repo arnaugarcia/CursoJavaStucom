@@ -8,7 +8,6 @@ public class ex07 {
 			BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
 			int[] enteros=new int[10];
 			int[] enteros2=new int[10];
-			int[] todos=new int[10];
 			for(int i=0; i<enteros.length; i++){
 				System.out.println("Introduce número " + i + ":");
 				enteros[i]=Integer.parseInt(buffer.readLine());
