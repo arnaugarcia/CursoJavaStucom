@@ -15,7 +15,7 @@ public class ex03 {
 			array.add("HOLA6");
 			array.add("HOLA7");
 			array.add("HOLA8");
-			System.out.println(array);
+			System.out.println(array.size());
 		} catch (Exception e) {
 			System.out.println("Error al introducir los datos");
 		}
