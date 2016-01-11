@@ -8,8 +8,9 @@ public class ex02 {
 			BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
 			ArrayList <Integer> array = new ArrayList();
 			for(int i=0; i<15; i++){
-			array.add(i++);	
+			array.add(i);	
 			}
+			System.out.println(array);
 		} catch (Exception e) {
 			System.out.println("Error al introducir los datos" + e);
 		}

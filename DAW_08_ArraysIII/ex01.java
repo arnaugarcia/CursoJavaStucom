@@ -16,6 +16,7 @@ public class ex01 {
 			array.add("jaja");
 			array.add("salud");
 			array.add(2);
+			System.out.println(array);
 		} catch (Exception e) {
 			System.out.println("Error al introducir los datos");
 		}
