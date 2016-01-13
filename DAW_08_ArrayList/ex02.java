@@ -1,4 +1,4 @@
-package DAW_08_ArraysIII;
+package DAW_08_ArrayList;
 import java.io.*;
 import java.util.*;
 public class ex02 {
