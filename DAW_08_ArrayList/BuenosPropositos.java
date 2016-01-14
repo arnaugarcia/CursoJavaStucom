@@ -6,7 +6,7 @@ public class BuenosPropositos {
 	public static void main(String[] args) {
 		try {
 			BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
-			int opcion = 0, ejercicioTotal = 0;
+			int opcion = 0, ejercicioTotal = 0, mediaPiezas=0, productividad=0, media=0;
 			String[] dias = new String[7];
 			dias[0]="Lunes";
 			dias[1]="Martes";
@@ -49,12 +49,12 @@ public class BuenosPropositos {
 				case 3:
 					for(int i=0; i<dias.length; i++){
 						System.out.println("Horas productivas el " + dias[i]);
-						horasProductivas.add(Integer.parseInt(buffer.readLine()));
+						horasProductivas.add(String.valueOf(Integer.parseInt(buffer.readLine())));
 					}
 				break;
 				case 4:
 					for(int i=0; i<dias.length; i++){
-						ejercicioTotal=ejercicioTotal+Integer.parseInt((String) ejercicio.get(i));
+						ejercicioTotal=ejercicioTotal+Integer.parseInt(String.valueOf(ejercicio.get(i)));
 					}
 					if(ejercicioTotal>=7){
 						System.out.println("Has echo suficiente ejercicio");
@@ -63,15 +63,50 @@ public class BuenosPropositos {
 					}
 					break;
 				case 5:
-					
+					for(int i=0; i<dias.length; i++){
+						mediaPiezas=mediaPiezas+Integer.parseInt(String.valueOf(fruta.get(i)));
+						mediaPiezas=mediaPiezas+Integer.parseInt(String.valueOf(verdura.get(i)));
+						media++;
+					}
+					System.out.println("La media de piezas de fruta y verdura són: " + mediaPiezas/media);
+					break;
+				case 6:
+						for(int i=0; i<dias.length; i++){
+							if(Integer.parseInt(String.valueOf(ejercicio.get(i)))>=45){
+								System.out.println("Has echo ejercicio el "  + dias[i] + ", muy bien. Productividad +2");
+								productividad=productividad+2;
+							}
+							if(verdura.get(i)!="" && fruta.get(i)!=""){
+								System.out.println("Has comido sano el  "  + dias[i] + ", muy bien. Productividad +2");
+								productividad=productividad+2;
+							}
+							if(horasProductivas.get(i)!=""){
+								System.out.println("Has echo horas productivas el   "  + dias[i] + ", muy bien. Productividad +2");
+								productividad=productividad++;
+							}
+						}
+					break;
+				case 7:
+					for(int i=0; i<dias.length; i++){
+						if(ejercicio.get(i)=="" || verdura.get(i)=="" || fruta.get(i)=="" || horasProductivas.get(i)==""){
+							System.out.println("Tienes que esforzarte más " + dias[i]);
+						}else{
+							if((fruta.get(i)=="" && verdura.get(i)=="") && Integer.parseInt(String.valueOf(horasProductivas.get(i)))<=5){
+								System.out.println("Enhorabuena, puedes comer un trozo de tarta!");
+							}
+						}
+					}
+					break;
+				case 8:
+					System.out.println("Keep calm and carry on!");
 					break;
 				default:
-					System.out.println("Es un numero mayor que tres");
+					System.out.println("El número introducido no és válido, vuelve a intentar lo!s");
 				break;
 				}	
 			}
 		} catch (Exception e) {
-			System.out.println("Error al introducir los datos");
+			System.out.println("Error al introducir los datos" + e);
 		}
 
 	}
