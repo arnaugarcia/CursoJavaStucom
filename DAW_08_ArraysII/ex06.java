@@ -1,4 +1,4 @@
-package DAW_07_ArraysII;
+package DAW_08_ArraysII;
 public class ex06 {
 
 	public static void main(String[] args) {

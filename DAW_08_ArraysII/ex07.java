@@ -1,4 +1,4 @@
-package DAW_07_ArraysII;
+package DAW_08_ArraysII;
 import java.io.*;
 import java.util.Arrays;
 public class ex07 {
