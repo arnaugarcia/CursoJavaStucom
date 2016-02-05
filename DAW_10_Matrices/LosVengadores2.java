@@ -1,5 +1,6 @@
 package DAW_10_Matrices;
 import java.io.*;
+import java.util.Arrays;
 public class LosVengadores2 {
 
 	public static void main(String[] args) {
@@ -81,26 +82,16 @@ public class LosVengadores2 {
 				case 3:
 					System.out.println("Introduce valoración de la misión:");
 					boolean select = false;
+					Arrays.sort(puntuacion);
 					mision=Integer.parseInt(buffer.readLine());
-					for(int i=0; i<puntuacion.length; i++){
-						if(puntuacion[i]>=mision && select==false){
-							if(i==0){
-								System.out.println("Capitan America ha sido selecionado con una putnuacion de:  " + puntuacion[i]);
-								select = true;
-							}else if(i==1){
-								System.out.println("Iron Man ha sido selecionado con una puntuacion de: " + puntuacion[i]);
-								select = true;
-							}else if(i==2){
-								System.out.println("Viuda Negra has sido slecionado con una puntuación de: " + puntuacion[i]);
-								select = true;
-							}else if(i==3){
-								System.out.println("Thor ha sido selecionado con una putnuación de: " + puntuacion[i]);
-								select = true;
-							}
-						}else if(mision>puntuacionFinal && select==false){
-							select = true;
-							System.out.println("Todos selecionados, tened cuidado");
-						}
+					if(mision<puntuacion[0]){
+						System.out.println("Es necesita Capitan America");
+					}else if(mision<puntuacion[0]+puntuacion[1]){
+						System.out.println("Es necesiten Capitan America i Iron Man");
+					}else if(mision<puntuacion[0]+puntuacion[1]+puntuacion[2]){
+						System.out.println("Es necesiten Capitan America, Iron Man i Viuda Negra");
+					}else if(mision<puntuacion[0]+puntuacion[1]+puntuacion[2]+puntuacion[3]){
+						System.out.println("Es necesiten tots, be careful.");
 					}
 					break;
 				case 4:

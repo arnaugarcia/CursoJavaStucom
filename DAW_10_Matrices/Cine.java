@@ -13,27 +13,31 @@ public class Cine {
 				}
 			}
 			//Comprem entrada
-			while(opcio!="0"){
+			while(!opcio.equals("0")){
 				System.out.println("Introduce un asiento: (X,X)");
 				opcio=buffer.readLine();
-				int columna = Integer.parseInt(String.valueOf(opcio.charAt(0)));
-				int fila = Integer.parseInt(String.valueOf(opcio.charAt(2)));
-				if(columna>7 || fila>8){
-					System.out.println("La butaca no existeix");
+				if(opcio.equals("0")){
+					System.out.println("Saliendo");
 				}else{
-					if (cine[columna][fila]=="o"){
-						System.out.println("La fila ja està comprada");
+					int columna = Integer.parseInt(String.valueOf(opcio.charAt(0)));
+					int fila = Integer.parseInt(String.valueOf(opcio.charAt(2)));
+					if(columna>=7 || fila>=8){
+						System.out.println("La butaca no existeix");
 					}else{
-						if(cine[columna][fila]=="*"){
-							cine[columna][fila]="o";
+						if (cine[columna][fila]=="o"){
+							System.out.println("La fila ja està comprada");
+						}else{
+							if(cine[columna][fila]=="*"){
+								cine[columna][fila]="o";
+							}
 						}
 					}
-				}
-				for(int i=0; i<cine.length; i++){
-					for(int j=0; j<cine[i].length; j++){
-						System.out.print(cine[i][j]);
-						if(j==cine[i].length-1){
-							System.out.println("");
+					for(int i=0; i<cine.length; i++){
+						for(int j=0; j<cine[i].length; j++){
+							System.out.print(cine[i][j]);
+							if(j==cine[i].length-1){
+								System.out.println("");
+							}
 						}
 					}
 				}
