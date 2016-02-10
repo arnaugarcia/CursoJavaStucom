@@ -1,4 +1,4 @@
-package POO;
+package POO_Inicial;
 import java.io.*;
 public class ex01 {
 
