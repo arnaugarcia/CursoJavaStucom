@@ -55,6 +55,9 @@ public class ex02 {
 					muerteB++;
 				}else if(muertes[i].equals("c")){
 					muerteC++;
+				}else{
+					System.out.println("Error");
+					i--;
 				}
 			}
 		} catch (Exception e) {
